@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +7,175 @@
 }
 
 body {
-    font-family: 'poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background: #a1c3ff;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: #1F2937;
+}
+
+h1 {
+    color: white;
+}
+
+
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1F2937;
+}
+
+ul {
+
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+a:hover {
+    color: blue;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.2;
+    background: #1F2937;
+    margin: 50px;
+}
+
+.p-first,
+.button {
+    margin-left: 80px;
+
+}
+
+.button {
+    width: 100px;
+    background: #3882F6;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.headerinfo p {
+
+    font-size: 18px;
+    color: #E5E7EB;
+
+}
+
+Main .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #FFFFFF;
+    padding-top: 10px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin: 20px;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.testimonals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background: #e5e7e5;
+    padding: 40px;
+}
+
+.testimonals p {
+    font-size: 36px;
+    font-weight: 900;
+    color: #00004C;
+
+
+}
+
+.testimonals h2 {
+    margin-left: auto;
+    margin-right: 300px;
+}
+
+.signup {
+    margin: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #3B82F6;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.info h3 {
+
+    color: #F9FAF8;
+    font-size: 36px;
+}
+
+.info p {
+    color: #F9FAF8;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+
+    width: 100px;
+    background: #3882F6;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #e5e7e5;
+    background: #1f2937;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
 }

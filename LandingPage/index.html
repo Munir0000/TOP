@@ -10,54 +10,67 @@
 
 <body>
 
+
+
+    <nav class="navbarContainer">
+        <div class="logo">
+            <h1>Header logo</h1>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#">header link one </a></li>
+                <li><a href="#">header link two </a></li>
+                <li><a href="#">header link three </a></li>
+            </ul>
+        </div>
+    </nav>
     <Header>
-
-        <nav class="navbarContainer">
-            <div class="logo">
-                <p>Header logo</p>
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="#">header link one </a></li>
-                    <li><a href="#">header link two </a></li>
-                    <li><a href="#">header link three </a></li>
-                </ul>
-            </div>
-        </nav>
-
         <div class="headerContainer">
             <div class="headerinfo">
-                <h2>This website is awesome</h2>
-                <p>This website has some subtext that goes here under the main title. It's a smaller font and the color
-                    is lower contrast</p>
-                <button>Sign Up</button>
-            </div>
-            <div class="image">
-                <img src="./img/pexels-ngqah83-885021.jpg" alt="cofeeimage">
+                <h1 class="p-first">This website is <br>
+                    awesome</h1>
+                <p class="p-first"> This website has some subtext that goes here under the main <br> title.
+                    It's a smaller font and the color
+                    is lower <br>contrast</p>
+                <button class="button" type="button">Sign Up</button>
             </div>
 
+            <img src="./img/free-photo-of-black-and-white-berlin-skyline-with-fernsehturm.jpeg" alt="cofeeimage"
+                width="500">
         </div>
     </Header>
 
     <Main>
-
         <div class="container">
-            <div class="Cards">
-                <p>this is some subtext under an illustration or image</p>
-                <div class="boxes">
+
+            <h2>Some random information.</h2>
+            <div class="boxes">
+                <div class="box">
+                    <div class="image-placeholder"></div>
+                    <p>this is some subtext <br> under an illustration <br> or image</p>
                 </div>
-                <p>this is some subtext under an illustration or image</p>
-                <div class="boxes"></div>
-                <p>this is some subtext under an illustration or image</p>
-                <div class="boxes"></div>
-                <p>this is some subtext under an illustration or image</p>
+                <div class="box">
+                    <div class="image-placeholder"></div>
+                    <p>this is some subtext <br> under an illustration <br> or image</p>
+                </div>
+                <div class="box">
+                    <div class="image-placeholder"></div>
+                    <p>this is some subtext <br> under an illustration <br> or image</p>
+                </div>
+                <div class="box">
+                    <div class="image-placeholder"></div>
+                    <p>this is some subtext <br> under an illustration <br> or image</p>
+                </div>
             </div>
 
+
             <div class="testimonals">
-                <p>This is an inspiring quote, or a testimonial from a customer. Maybe it’s just filling up space, or
-                    maybe people will
-                    actually read it. Who knows? All I know is that it looks nice</p>
-                <span>Muniro, The Eagle</span>
+                <p>This is an inspiring quote, or a <br> testimonial from a customer. Maybe <br> it’s just filling up
+                    space,
+                    or
+                    maybe <br> people will
+                    actually read it. Who <br>knows? All I know is that it looks nice</p>
+                <h2>- Muniro, The Eagle</h2>
             </div>
 
             <div class="signup">
@@ -65,16 +78,14 @@
                     <h3>Call to action! it's time! </h3>
                     <p>sign up for our product by clicking that button right there </p>
                 </div>
-                <div class="button">
-                    <button type="button">Sign Up</button>
+                <div>
+                    <button class="btn" type="button">Sign Up</button>
                 </div>
-
             </div>
-
-
         </div>
-
     </Main>
+
+
     <footer>
         <p>copyright &copy; The odin Project 2021</p>
     </footer>
