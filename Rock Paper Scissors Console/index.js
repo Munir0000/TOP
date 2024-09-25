@@ -1,8 +1,61 @@
 let choices = ["Rock", "Paper", "Scissor"];
+let userCountWin = 0;
+let computerWinCount = 0;
 
-const acceptUserInput = () => {
-  let userInput = prompt("Choose: Rock, Paper, or Scissor").trim();
-  return userInput.charAt(0).toUpperCase() + userInput.slice(1).toLowerCase();
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    let usinpu = button.textContent;
+    playRound(usinpu);
+  });
+});
+
+function playRound(usinpu) {
+  let winResult = play(usinpu);
+
+  if (winResult === true) {
+    userCountWin++;
+  } else if (winResult === false) {
+    computerWinCount++;
+  }
+
+  if (userCountWin === 5 || computerWinCount === 5) {
+    decideWinner();
+    userCountWin = 0;
+    computerWinCount = 0;
+  }
+
+  // Update the UI with current scores
+  document.querySelector("#user").textContent = `Your Score: ${userCountWin}`;
+  document.querySelector(
+    "#comp"
+  ).textContent = `Computer's Score: ${computerWinCount}`;
+}
+
+const play = (userResponse) => {
+  let computerResponse = computersChoice();
+  let userWins = false;
+
+  if (computerResponse === userResponse) {
+    alert(`It's a tie! Both chose ${userResponse}`);
+    return null;
+  }
+
+  if (
+    (computerResponse === "Scissor" && userResponse === "Paper") ||
+    (computerResponse === "Rock" && userResponse === "Scissor") ||
+    (computerResponse === "Paper" && userResponse === "Rock")
+  ) {
+    alert(
+      `Computer chose ${computerResponse}, You chose ${userResponse}: You Lose!`
+    );
+    return false;
+  } else {
+    alert(
+      `Computer chose ${computerResponse}, You chose ${userResponse}: You Win!`
+    );
+    return true;
+  }
 };
 
 const computersChoice = () => {
@@ -10,80 +63,15 @@ const computersChoice = () => {
   return choices[computerInput];
 };
 
-let userCountWin = 0;
-let computerWinCount = 0;
-
-const play = () => {
-  let computerResponse = computersChoice();
-  let userResponse = acceptUserInput();
-
-  if (computerResponse === userResponse) {
-    alert(`It's a tie! Both chose ${userResponse}`);
-    return null;
-  }
-
-  let userWins = false;
-
-  if (computerResponse === "Scissor" && userResponse === "Paper") {
-    alert("Computer chose Scissor, You chose Paper: You Lose!");
-  } else if (computerResponse === "Paper" && userResponse === "Scissor") {
-    alert("Computer chose Paper, You chose Scissor: You Win!");
-    userWins = true;
-  }
-
-  if (computerResponse === "Rock" && userResponse === "Scissor") {
-    alert("Computer chose Rock, You chose Scissor: You Lose!");
-  } else if (computerResponse === "Scissor" && userResponse === "Rock") {
-    alert("Computer chose Scissor, You chose Rock: You Win!");
-    userWins = true;
-  }
-
-  if (computerResponse === "Paper" && userResponse === "Rock") {
-    alert("Computer chose Paper, You chose Rock: You Lose!");
-  } else if (computerResponse === "Rock" && userResponse === "Paper") {
-    alert("Computer chose Rock, You chose Paper: You Win!");
-    userWins = true;
-  }
-
-  return userWins;
-};
-
 const decideWinner = () => {
+  let winner = document.querySelector("#winner");
+
   if (userCountWin > computerWinCount) {
-    alert(
-      `Congratulations! You have won!
-        Your Score: ${userCountWin}
-        Computer's Score: ${computerWinCount}`
-    );
+    winner.textContent = winner.textContent + "You!";
   } else if (computerWinCount > userCountWin) {
-    alert(
-      `You Lose! Play Again
-        Your Score: ${userCountWin}
-        Computer's Score: ${computerWinCount}`
-    );
+    winner.textContent = winner.textContent + "Computer";
   } else {
-    alert(
-      `No winner, it's a tie. Play Again.
-        Your Score: ${userCountWin}
-        Computer's Score: ${computerWinCount}`
-    );
+    winner.textContent =
+      winner.textContent + "No winner, it's a tie. Play Again";
   }
 };
-
-function playRound() {
-  for (let i = 0; i < 5; i++) {
-    alert(`Round: ${i + 1}`);
-    let winResult = play();
-    if (winResult === true) {
-      userCountWin++;
-    } else if (winResult === false) {
-      computerWinCount++;
-    }
-
-    if (i === 4) {
-      decideWinner();
-    }
-  }
-}
-
-playRound();
