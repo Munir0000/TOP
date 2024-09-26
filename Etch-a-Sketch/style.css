@@ -1,0 +1,45 @@
+  * {
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+  }
+
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .container {
+      margin-top: 100px;
+      display: flex;
+
+      flex-wrap: wrap;
+      width: 400px;
+      /* Adjust according to desired total width */
+      height: 400px;
+      /* Adjust height accordingly */
+  }
+
+
+  .grid-item {
+      width: 25px;
+      /* 400px / 16 */
+      height: 25px;
+      /* Keeps the squares */
+      border: 2px solid black;
+
+  }
+
+  .btn-top {
+      width: 150px;
+      height: 25px;
+      align-self: flex-start;
+      margin-top: 40px;
+      color: black;
+      background-color: aquamarine;
+
+  }

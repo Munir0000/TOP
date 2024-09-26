@@ -23,6 +23,7 @@ function playRound(usinpu) {
     decideWinner();
     userCountWin = 0;
     computerWinCount = 0;
+    
   }
 
   // Update the UI with current scores
