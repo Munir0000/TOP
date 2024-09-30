@@ -39,6 +39,7 @@ body {
 .screen {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     background-color: #EEEEEE;
     width: 360px;
     height: 119.2px;
@@ -75,7 +76,7 @@ body {
     text-align: center;
 }
 
-.btnContainer .btn {
+.btnContainer button {
     border: 2px solid #333333;
     border-radius: 5px;
     font-size: 20px;
@@ -85,18 +86,20 @@ body {
     margin-bottom: 10px;
 }
 
-#one {
+.btnContainer button:hover {
+    filter: blur(0.5px);
+    background-color: #333333;
+}
 
+.btnContainer button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #333333;
+}
+
+#one {
     background-color: #EE9999;
 }
 
 #two {
     background-color: #9999EE;
-
 }
-
-
-/* 
-span {
-    padding-left: auto;
-} */
