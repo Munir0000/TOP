@@ -39,7 +39,7 @@ body {
 .screen {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+
     background-color: #EEEEEE;
     width: 360px;
     height: 119.2px;
@@ -47,11 +47,15 @@ body {
     border: 2px solid #333333;
     line-height: 140px;
     font-size: 40px;
+    overflow: hidden;
 }
 
 .screen span {
+    overflow: hidden;
     align-self: flex-end;
+
     margin-right: 15px;
+
 }
 
 .padsContainer {
@@ -87,7 +91,7 @@ body {
 }
 
 .btnContainer button:hover {
-    filter: blur(0.5px);
+    /* filter: blur(0.5px); */
     background-color: #333333;
 }
 
