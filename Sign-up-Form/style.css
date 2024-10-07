@@ -9,6 +9,7 @@
 body {
     background-color: #FFFFFF;
     display: flex;
+
     font-family: "Roboto",
         sans-serif;
     ;
@@ -21,11 +22,10 @@ body {
 .container {
     margin-top: 5px;
     display: flex;
-    border: 2px solid black;
-    border-radius: 5px;
     width: 1400px;
     height: 680px;
-
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
 }
 
 .left {
@@ -49,7 +49,8 @@ body {
 .main,
 .footer {
     width: 898.55;
-    height: 269.5px;
+    border-top-right-radius: 20px;
+
     /* border: 1px solid red; */
 }
 
@@ -57,6 +58,7 @@ body {
     padding: 40px;
     font-size: 1.25rem;
     font-weight: bolder;
+
     background-color: #FAFAFA;
     color: #333333;
 }
@@ -64,13 +66,16 @@ body {
 .main {
     display: flex;
 
+    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.3);
+
 }
 
 .main-left {
     display: flex;
-    flex-wrap: wrap;
+
     padding-left: 40px;
     padding-top: 20px;
+    padding-bottom: 20px;
     gap: 30px;
     width: 1000%;
     height: 100%;
@@ -80,7 +85,7 @@ body {
 
 
 input {
-    height: 30px;
+    height: 35px;
     width: 300px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -88,9 +93,10 @@ input {
 }
 
 label {
-    font-size: 0.7rem;
+    font-size: 11.2px;
     font-weight: 500;
     color: #333333;
+
 }
 
 .span {
@@ -98,4 +104,62 @@ label {
     padding-top: 20px;
     font-size: 1.25rem;
     font-weight: 600;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px;
+}
+
+button {
+    margin-top: 25px;
+    background-color: #596D48;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.footinfo {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.left {
+    position: relative;
+}
+
+.overlay {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    opacity: 85%;
+    background-color: rgb(8, 6, 6);
+    margin-top: 15%;
+    top: 0;
+
+    left: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
