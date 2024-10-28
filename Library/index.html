@@ -24,20 +24,41 @@
 
     <main class="maincont">
         <div class="icon">
-            <button>ADD</button>
+            <button id="openModalBtn">ADD</button>
         </div>
 
+        <dialog id="myModal">
+            <h2>Add a new book</h2>
+            <form action="">
 
-        <div class="childMain">
+                <input type="text" name="title" id="title" placeholder="Title">
+                <input type="text" name="author" id="author" placeholder="Author">
+                <input type="number" name="pages" id="pages" placeholder="Pages">
+                <div class="formCheck">
+                    <label for="">Have You Read it </label>
+                    <input type="checkbox" name="read" id="read" width="100px" height="50px">
+                </div>
+
+                <button id="submitModalBtn" type="submit">Submit</button>
+            </form>
+
+        </dialog>
+        <div class="container">
+            <div class="childMain">
+
+
+            </div>
+            <div class="childMain"></div>
+
+
 
 
         </div>
-        <div class="childMain"></div>
-
 
 
 
     </main>
+
     <footer>
         <h3>copyright &copy; 2024 Munir</h3>
     </footer>
