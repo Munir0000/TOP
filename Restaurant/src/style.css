@@ -1,0 +1,62 @@
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+
+   body {
+       font-family: 'Roboto', sans-serif;
+       height: 100vh;
+       background: #529a7c;
+   }
+
+   header {
+       width: 100%;
+       background-color: #62FFBE;
+   }
+
+   /* Reset some default styles */
+   ul {
+       padding: 0;
+       margin: 0;
+       display: flex;
+       justify-content: center;
+       background-color: #D8FF96;
+   }
+
+   ul li {
+       list-style-type: none;
+   }
+
+   ul li button.tab {
+       background: none;
+       border: none;
+       padding: 15px 20px;
+       margin: 5px;
+       font-size: 16px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       border-radius: 5px;
+   }
+
+   ul li button.tab:hover,
+   ul li button.tab:focus {
+       background-color: #529a7c;
+       color: white;
+       outline: none;
+       box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+   }
+
+   ul li button.tab:active {
+       background-color: #529a7c;
+   }
+
+   nav {
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   /* Optional: Add some styles for the active tab */
+   ul li button.tab.active {
+       background-color: #529a7c;
+       color: white;
+   }
