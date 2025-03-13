@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 30%;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px;
+}
+
+#project-list {
+    list-style: none;
+}
+
+#project-list li {
+    padding: 8px;
+    background: #444;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#project-list li:hover {
+    background: #555;
+}
+
+#add-project {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#add-project:hover {
+    background: #0056b3;
+}
+
+#task-container {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-task {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#add-task:hover {
+    background: #218838;
+}
+
+#project-name {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Add some focus effect */
+#project-name:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.project-item {
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Active project styling */
+.project-item.active {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}

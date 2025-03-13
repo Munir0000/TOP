@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌤 Just Weather</div>
+        <input type="text" placeholder="Search for cities" id="searchbar">
+        <button class="unit-toggle">°F / °C</button>
+    </header>
+
+    <main>
+        <section class="current-weather">
+            <div class="right">
+                <h1 id="city"></h1>
+                <p class="temperature" id="temp"></p>
+            </div>
+
+            <div class="left"><img src="weather-icon.png" alt="Weather icon" id="imgtemp"></div>
+
+        </section>
+
+        <section class="forecast">
+            <h2>Today's Forecast</h2>
+            <div class="forecast-container">
+                <div class="hour" id="hourhere">
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="weather-details">
+            <h2>Weather Details</h2>
+            <div class="details-container">
+                <div class="detail">
+                    <p>Sunrise</p>
+                    <p id="Sunrise"></p>
+                </div>
+                <div class="detail">
+                    <p>Sunset</p>
+                    <p id="sunset"></p>
+                </div>
+                <div class="detail">
+                    <p>Chance of Rain</p>
+                    <p id="chanceofrain"></p>
+                </div>
+                <div class="detail">
+                    <p>Pressure</p>
+                    <p id="pressure"></p>
+                </div>
+                <div class="detail">
+                    <p>Wind</p>
+                    <p id="wind"></p>
+                </div>
+                <div class="detail">
+                    <p>UV Index</p>
+                    <p id="uvindex"></p>
+                </div>
+                <div class="detail">
+                    <p>Feels Like</p>
+                    <p id="feelslike"></p>
+                </div>
+                <div class="detail">
+                    <p>Visibility</p>
+                    <p id="visibility"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
