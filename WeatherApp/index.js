@@ -1,5 +1,5 @@
 const url = "http://api.weatherapi.com/v1/forecast.json";
-const apikey = "";
+const apikey = "aa2a7147559440bcbbd54300241902";
 
 // Selecting HTML elements
 const cityName = document.getElementById("city");
@@ -9,7 +9,7 @@ const searchbar = document.getElementById("searchbar");
 const hourForecast = document.getElementById("hourhere");
 const forecastImage = document.getElementById("hourimg");
 const forecastTemprature = document.getElementById("tempforecast");
-const sunrise = document.getElementById("tempforecast");
+const sunrise = document.getElementById("Sunrise");
 const sunset = document.getElementById("sunset");
 const chanceofrain = document.getElementById("chanceofrain");
 const uvindex = document.getElementById("uvindex");
@@ -36,6 +36,10 @@ function updateWeatherUI(weatherData) {
   cityName.textContent = weatherData.location.name;
   temperature.textContent = `${weatherData.current.temp_c}°C`;
   tempImage.src = `https:${weatherData.current.condition.icon}`;
+  sunrise.textContent = weatherData.forecast.forecastday[0].astro.sunrise;
+  sunset.textContent = weatherData.forecast.forecastday[0].astro.sunset;
+  chanceofrain.textContent =
+    weatherData.forecast.forecastday[0].hour.chance_of_rain;
 
   weatherData.forecast.forecastday[0].hour.forEach((hour) => {
     const hourElement = document.createElement("div");
